@@ -64,7 +64,7 @@ flowchart LR
 
 ### 1. Clone and set up the database
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Yuvrajsingh1256/smart-docs-app.git
 cd smart-docs-app
 ```
 
