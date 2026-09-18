@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0E1116;
+  background-image: radial-gradient(circle at 20% 0%, rgba(76, 133, 119, 0.08), transparent 45%),
+    radial-gradient(circle at 90% 100%, rgba(76, 133, 119, 0.05), transparent 40%);
+  color: #EDEBE3;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Slim, dark scrollbars instead of the browser default */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A313C;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #363f4c;
+}
+
+/* Auto-resizing textarea shouldn't show a resize handle */
+textarea {
+  resize: none;
+}
