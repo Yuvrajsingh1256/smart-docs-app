@@ -53,12 +53,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build backend Docker image
+      - name: Build and push backend Docker image
+        if: github.event_name == 'push'
         uses: docker/build-push-action@v7
         with:
           context: ./backend
-          push: false
-          tags: smart-docs-backend:ci
+          push: true
+          tags: yuvrajsingh6437/smart-docs-backend:latest
 
       - name: Build frontend Docker image
         uses: docker/build-push-action@v7
