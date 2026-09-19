@@ -61,9 +61,10 @@ jobs:
           push: true
           tags: yuvrajsingh6437/smart-docs-backend:latest
 
-      - name: Build frontend Docker image
+      - name: Build and push frontend Docker image
+        if: github.event_name == 'push'
         uses: docker/build-push-action@v7
         with:
           context: ./frontend
-          push: false
-          tags: smart-docs-frontend:ci
+          push: true
+          tags: yuvrajsingh6437/smart-docs-frontend:latest
